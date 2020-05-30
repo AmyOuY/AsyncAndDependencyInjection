@@ -3,6 +3,6 @@
 Technologies involved:
 Caliburn.Micro MVVM and Bootstrapper Dependency Injection
 
-<img src="./progressBar.png">
+<img src="./Images/progressBar.png">
 
-<img src="./doneTime.png">
+<img src="./Images/doneTime.png">
