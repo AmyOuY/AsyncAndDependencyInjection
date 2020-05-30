@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using WPFDemo.Library;
 using WPFDemo.ViewModels;
 
 namespace WPFDemo
@@ -21,14 +22,19 @@ namespace WPFDemo
 
         protected override void Configure()
         {
-            _container.Instance(_container);
+            _container.Instance(_container)
+                .PerRequest<IDownloadMethods, DownloadMethods>();
+
+            _container
+               .Singleton<IWindowManager, WindowManager>();
+
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
                 .Where(type => type.Name.EndsWith("ViewModel"))
                 .ToList()
                 .ForEach(viewModelType => _container.RegisterPerRequest(
-                    viewModelType, viewModelType.ToString(), viewModelType));
+                   viewModelType, viewModelType.ToString(), viewModelType));
 
         }
 
