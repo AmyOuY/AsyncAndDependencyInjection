@@ -5,5 +5,4 @@ Caliburn.Micro MVVM and Bootstrapper Dependency Injection
 
 <img src="./progressBar.png">
 
------------------------------------------------------------------------------------------------
 <img src="./doneTime.png">
