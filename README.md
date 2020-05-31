@@ -7,4 +7,4 @@ Caliburn.Micro MVVM and Bootstrapper Dependency Injection
 
 <img src="./Images/doneTime.png">
 
-# UI Demo to show Autofac Dependency Injection
+# Console UI Demo to show Autofac Dependency Injection
